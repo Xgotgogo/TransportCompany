@@ -1,0 +1,49 @@
+﻿<Window x:Name="Authorization" x:Class="TransportCompany.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TransportCompany"
+        mc:Ignorable="d"
+        Title="Authorization" Height="600" Width="800" WindowStyle="None" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Icon="Images/premium-icon-shipping 2.png">
+    <Grid x:Name="authorizationGrid">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black" Offset="1"/>
+                <GradientStop Color="#FF4977C5" Offset="0.993"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Border x:Name="authorizationBorder" BorderThickness="1" HorizontalAlignment="Left" Height="36" VerticalAlignment="Top" Width="800" MouseDown="authorizationBorder_MouseDown">
+            <Border.Background>
+                <SolidColorBrush Color="#FFF1A02B"/>
+            </Border.Background>
+            <Button x:Name="authorizationCloseButton" Content="X" HorizontalAlignment="Left" Margin="763,-1,-1,-1" Width="36" RenderTransformOrigin="2.167,0.139" BorderBrush="{x:Null}" FontWeight="Bold" FontSize="20" Padding="1" Foreground="Black" BorderThickness="1" Click="authorizationCloseButton_Click">
+                <Button.Background>
+                    <SolidColorBrush Color="#FFF1A02B"/>
+                </Button.Background>
+            </Button>
+        </Border>
+        <Border x:Name="authorizationGeneralBorder" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Margin="180,70,0,0" Width="440" Height="490" VerticalAlignment="Top">
+            <Border.Background>
+                <SolidColorBrush Color="#FFF1A02B"/>
+            </Border.Background>
+        </Border>
+        <Label x:Name="authorizationLabel" Content="Авторизация" HorizontalAlignment="Left" Margin="180,80,180,458" VerticalAlignment="Top" Width="440" Height="62" Background="{x:Null}" FontSize="36" HorizontalContentAlignment="Center" Foreground="Black"/>
+        <Label x:Name="loginLabel" Content="Логин" HorizontalAlignment="Left" Margin="234,160,485,0" VerticalAlignment="Top" Width="81" Height="31" FontSize="16" Foreground="Black" Background="{x:Null}"/>
+        <Label x:Name="passwordLabel" Content="Пароль" HorizontalAlignment="Left" Margin="234,230,485,0" VerticalAlignment="Top" Width="81" Height="31" FontSize="16" Foreground="Black" Background="{x:Null}"/>
+        <TextBox x:Name="loginTextBox" HorizontalAlignment="Left" Height="34" Margin="234,191,234,375" TextWrapping="Wrap" VerticalAlignment="Top" Width="332" VerticalContentAlignment="Center" Padding="1" FontSize="14"/>
+        <TextBox x:Name="passwordTextBox" HorizontalAlignment="Left" Height="34" Margin="234,261,234,305" TextWrapping="Wrap" VerticalAlignment="Top" Width="332" VerticalContentAlignment="Center" Padding="1" FontSize="14"/>
+        <PasswordBox x:Name="passwordBox" HorizontalAlignment="Left" Margin="234,261,0,0" VerticalAlignment="Top" Width="332" Height="34" VerticalContentAlignment="Center" Padding="1" FontSize="14"/>
+        <CheckBox x:Name="showPasswordCheckBox" Content="Показать пароль" HorizontalAlignment="Left" Margin="234,300,0,0" VerticalAlignment="Top" Width="332" Height="17" FontSize="14" Foreground="Black" BorderBrush="{x:Null}" Click="showPasswordCheckBox_Click"/>
+        <Button x:Name="loginButton" Content="ВОЙТИ" Margin="299,477,299,65" Width="202" Height="58" Padding="1,1,1,5" FontSize="36" Background="{x:Null}" BorderBrush="Black" Foreground="Black" Click="loginButton_Click"/>
+        <Label x:Name="captchaLabel" Content="Введите Captcha" HorizontalAlignment="Left" Margin="259,335,0,0" VerticalAlignment="Top" Width="169" Height="31" FontSize="16" Foreground="Black" Background="{x:Null}" Visibility="Hidden"/>
+        <TextBox x:Name="captchaGenTextBox" HorizontalAlignment="Left" Height="34" Margin="259,366,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="242" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Kristen ITC" FontSize="20" Visibility="Hidden" IsReadOnly="True"/>
+        <TextBox x:Name="captchaTextBox" HorizontalAlignment="Left" Height="34" Margin="259,410,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="282" VerticalContentAlignment="Center" FontSize="16" Visibility="Hidden"/>
+        <Button x:Name="refreshButton" Content="" HorizontalAlignment="Left" Margin="506,366,0,0" VerticalAlignment="Top" Width="35" Height="34" BorderBrush="{x:Null}" Foreground="{x:Null}" Visibility="Hidden" Click="refreshButton_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="Images/refresh_reload_update_arrow_icon_179153.png"/>
+            </Button.Background>
+        </Button>
+        <Image x:Name="authorizationImage" Margin="518,471,218,65" Source="Images/premium-icon-shipping.png" Stretch="Fill" Width="64" Height="64"/>
+    </Grid>
+</Window>
